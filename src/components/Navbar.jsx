@@ -13,8 +13,7 @@ import icon from "../images/cryptocurrency.png";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(true);
-  const [screenSize, setScreenSize] = useState(null);
-
+  const [screenSize, setScreenSize] = useState();
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
 
@@ -38,7 +37,7 @@ const Navbar = () => {
     <div className="nav-container">
       <div className="logo-container">
         <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className="logo">
+        <Typography.Title level={3} className="logo">
           <Link to="/">Cryptomania</Link>
         </Typography.Title>
         <Button
